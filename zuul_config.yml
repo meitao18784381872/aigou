@@ -6,7 +6,7 @@ server:
   port: 9527
 spring:
   application:
-    name: zuul-gateway
+    name: MICROSERVICE-ZUUL-GATEWAY
   profiles: dev
 eureka:
   client:
@@ -26,14 +26,14 @@ server:
   port: 9528
 spring:
   application:
-    name: ZUUL-GATEWAY
+    name: MICROSERVICE-ZUUL-GATEWAY-TEST
   profiles: test
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
   instance:
-    instance-id: gateway-9527.com #在服务中心显示的名字而已
+    instance-id: gateway-9528.com #在服务中心显示的名字而已
     prefer-ip-address: true #是否在服务注册中心显示IP + 端口
 zuul:
   routes:
