@@ -13,14 +13,14 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka
   instance:
-    instance-id: gateway-9527.com #在服务中心显示的名字而已
-    prefer-ip-address: true #是否在服务注册中心显示IP + 端口
+    instance-id: gateway-9527.com #显示的名字而已
+    prefer-ip-address: true
 zuul:
   routes:
-    wbUser.serviceId: user-provider
-    wbUser.path: /aigou/**  #/aigou/**这个路径的访问都路由到serverId服务处理
-  ignored-services: "*"  # 忽略这个服务，如果要忽略所有的服务， “*”
-  prefix: "/mt"
+    haiGou.serviceId: user-provider
+    haiGou.path: /aigou/**  #路由映射：/sean/**这个路径的访问都路由到serverId服务处理
+  ignored-services: "*"  # 安全加固：忽略这个服务，如果要忽略所有的服务， “*”
+  prefix: "/mt"  # 统一前缀
 ---
 server:
   port: 9528
@@ -33,11 +33,11 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka
   instance:
-    instance-id: gateway-9528.com #在服务中心显示的名字而已
-    prefer-ip-address: true #是否在服务注册中心显示IP + 端口
+    instance-id: gateway-9528.com #显示的名字而已
+    prefer-ip-address: true
 zuul:
   routes:
-    wbUser.serviceId: user-provider
-    wbUser.path: /aigou/**  #/aigou/**这个路径的访问都路由到serverId服务处理//网官礼金
-  ignored-services: "*"  # 忽略这个服务，如果要忽略所有的服务， “*”
-  prefix: "/mt"
+    haiGou.serviceId: user-provider
+    haiGou.path: /aigou/**  #路由映射：/sean/**这个路径的访问都路由到serverId服务处理
+  ignored-services: "*"  # 安全加固：忽略这个服务，如果要忽略所有的服务， “*”
+  prefix: "/mt"  # 统一前缀
