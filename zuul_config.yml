@@ -6,7 +6,7 @@ server:
   port: 9527
 spring:
   application:
-    name: MICROSERVICE-ZUUL-GATEWAY
+    name: microservice-zuul-gateway
   profiles: dev
 eureka:
   client:
@@ -28,7 +28,7 @@ server:
   port: 9528
 spring:
   application:
-    name: MICROSERVICE-ZUUL-GATEWAY-TEST
+    name: microservice-zuul-gateway-test
   profiles: test
 eureka:
   client:
