@@ -5,21 +5,37 @@ spring:
 server:
   port: 8002
 spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/aigou
+    username: root
+    password: root
   application:
-    name: PRODUCT-PROVIDER  #·şÎñµÄÃû×Ö
+    name: product-provider  #æœåŠ¡çš„åå­—
   profiles: dev
+mybatis-plus:
+  mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml
+  type-aliases-package: cn.itsource.aigou.domain
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7001/eureka  #·şÎñ×¢²áµÄ×¢²áÖĞĞÄµÄµØÖ·
+      defaultZone: http://localhost:7001/eureka  #æœåŠ¡æ³¨å†Œçš„æ³¨å†Œä¸­å¿ƒçš„åœ°å€
 ---
 server:
   port: 8012
 spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/aigou
+    username: root
+    password: root
   application:
-    name: PRODUCT-PROVIDER  #·şÎñµÄÃû×Ö
+    name: product-provider  #æœåŠ¡çš„åå­—
   profiles: test
+mybatis-plus:
+  mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml
+  type-aliases-package: cn.itsource.aigou.domain
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7001/eureka  #·şÎñ×¢²áµÄ×¢²áÖĞĞÄµÄµØÖ·
+      defaultZone: http://localhost:7001/eureka  #æœåŠ¡æ³¨å†Œçš„æ³¨å†Œä¸­å¿ƒçš„åœ°å€
